@@ -8,8 +8,10 @@ int main{
 
  //Drawing part
  turtle_set_heading(90);
+ for(i<4, i=0, i++){
  turtle_forward(100);
-
+ turtle_turn_right(90);
+ }
  //export   
     turtle_draw_turtle();
     turtle_save_bpm("itevenexportsasa.bpm");
