@@ -17,6 +17,21 @@ void square(){
 
 }
 
+void spiral(){
+ t.pen_down();
+ t.pencolor("black");
+ int width = 1
+ int dist = 10
+ for(i = 0, i < 50, i++){
+   t.forward(dist);
+   t.pensize(width);
+   t.left(90)
+   dist += 10;
+   width ++;
+ }
+
+}
+
 int main(){
   ct::TurtleScreen scr;
   ct::Turtle t(scr);
