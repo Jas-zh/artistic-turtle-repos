@@ -24,6 +24,7 @@ int main(){
   t.fillcolour({"blue"});
   for(int e = 0, e < 2, e++){
   square();
+  t.forward(200)
   }
   scr.bye();
   return 0;
