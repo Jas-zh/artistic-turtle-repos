@@ -41,6 +41,9 @@ int main(){
   square();
   t.forward(200)
   }
+
+  spiral();
+  
   scr.bye();
   return 0;
 }
