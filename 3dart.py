@@ -26,3 +26,5 @@ t.forward(150)
 t.right(135)
 
 t.forward(100)
+
+sc.update
