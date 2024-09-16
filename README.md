@@ -25,5 +25,8 @@ Just create a new .c file in your IDE of choice: VScode, Notepad++, Eclipse, Cod
 INSTANT success, organized, beautiful code.
 # EVEN WORKS ON ARCH LINUX!!
 
+# EDIT: only works on C++. whatever
+
 source:
 https://w3.cs.jmu.edu/lam2mo/cs240_2015_08/turtle.html
+https://runestone.academy/ns/books/published/cppds/Introduction/Graphics.html
