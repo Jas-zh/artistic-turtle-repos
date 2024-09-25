@@ -68,6 +68,9 @@ def snowflakes():
     t.begin_fill()
     for i in range (10):
         t.circle(5)
+        x = random.randint(-300,300)
+        y = random.randint(-300,300)
+        t.goto(x,y)
     t.end_fill()
 
 square()
