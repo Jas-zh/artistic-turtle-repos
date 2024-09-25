@@ -43,27 +43,14 @@ def spiral():
 def anotherspiral():
     dist2 = 0.01
     width2 = 0.1
-    colorpicker = random.randint(0,2)
-    if colorpicker == 0:
-        colour = "blue4"
-    elif colorpicker == 1:
-        colour = "gold"
-    else:
-        colour = "black"
-     
+    t.pencolor(random.random(),random.random(),random.random())
     for i in range (1000):
-        if colorpicker == 0:
-            colour = "blue4"
-        elif colorpicker == 1:
-            colour = "gold"
-        else:
-            colour = "black"
         t.forward(dist2)
         t.pensize(width2)
-        t.pencolor(colour)
         t.right(1)
         dist2 += 0.01
         width2 += 0.1
+        
 def snowflakes():
     t.home()
     t.pencolor("white")
@@ -77,15 +64,17 @@ def snowflakes():
         t.goto(x,y)
 
     
-def starwithpent():
+def penta():
     t.pensize(10)
-    t.fillcolor("yellow")
-    t.pencolor("grey")
+    t.fillcolor("grey")
+    t.pencolor("yellow")
     t.home()
     t.begin_fill()
-    for i in range (5):
-        t.forward(100)
-        t.left(72)
+    for i in range (4):
+        t.left(10)
+        t.forward(50)
+        t.left(70)
+        t.forward(50)
     t.end_fill()
     
 def penupdown():
@@ -93,6 +82,20 @@ def penupdown():
     t.home()
     t.pendown()
     
+def pents():
+    for i in range (100):
+        t.pendown()
+        x = random.randint(-300,300)
+        y = random.randint((200 + x) * (600/600), 300)
+        t.goto(x,y)
+        t.penup()
+        penta()
+
+def randomline():
+    for i in range(100):
+        x = random.randint(-300,300)
+        t.goto(x,x)
+
 
 square()
 t.forward(150)
@@ -119,7 +122,7 @@ anotherspiral()
 penupdown()
 snowflakes()
 penupdown()
-starwithpent()
-
-
+pents()
+penupdown()
+randomline()
 
