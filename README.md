@@ -9,3 +9,4 @@ LA_Task3.py - LA task 3
 
 ### Project Updates:
 29th Sep, 2024 - Updated README.md
+4th Oct, 2024 - Began work on the project
