@@ -1,72 +1,25 @@
-# Generalities
-import turtle
+import numpy as np
+import matplotlib.pyplot as plt
 
-t = turtle.Turtle()
-sc = turtle.Screen
-i = 0
+# Number of random points to generate
+num_points = 100
 
-#CSS
-t.pensize(30)
-t.pencolor("gold2")
-t.fillcolor("yellow2")
+# Generate random x-coordinates between 0 and 2*pi
+x = np.random.uniform(0, 2 * np.pi, num_points)
 
-# Picasso's dream
-t.begin_fill()
-while i < 6:
- t.forward(100)
- t.left(60)
- i += 1
+# Compute corresponding y-coordinates using the sine function
+y = np.sin(x)
 
-t.forward(100)
-i = 0
+# Generate random offsets for the y-coordinates
+offsets = np.random.uniform(-0.5, 0.5, num_points)
 
-while i < 6:
-    t.right(60)
-    t.forward(100)
-    i += 1
+# Add offsets to the y-coordinates
+y += offsets
 
-t.left(60)
-i = 0
-while i < 6:
- t.forward(100)
- t.right(60)
- i += 1
+# Plot the points
+plt.scatter(x, y, color='blue', s=10)
 
-t.forward(100)
-t.left(60)
-i=0
-
-while i < 6:
- t.forward(100)
- t.right(60)
- i += 1 
-
-t.end_fill()
-
-t.penup()
-t.forward(200)
-t.left(90)
-t.forward(300)
-
-#BEE CSS
-t.pencolor("black")
-t.pensize(15)
-t.fillcolor("gold2")
-#BEEEEEEEE
-t.begin_fill()
-t.pendown()
-r = 75
-t.circle(r)
-
-t.penup()
-t.forward(100)
-t.pendown()
-t.circle(r-10)
-t.end_fill()
-
-t.left(90)
-t.forward(100)
-
-#Outro
-sc.update()
-sc.exitonclick()	
+# Plot the sine curve
+x_vals = np.linspace(0, 2 * np.pi, 100)
+y_vals = np.sin(x_vals)
+plt.plot(x_vals, y_vals, color='red')
