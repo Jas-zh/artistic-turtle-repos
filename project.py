@@ -21,9 +21,23 @@ def ground():
         t.forward(350)
     t.end_fill()
 
+def semicircle():
+    t.pencolor(0.871, 0.859, 0.345)
+    t.fillcolor(0.941, 0.922, 0.176)
+    t.begin_fill()
+    t.right(180)
+    t.forward(175)
+    t.left(90)
+    t.circle(150, extent= 180)
+    t.left(90)
+    t.forward(175)
+    t.end_fill()
+    
+
+
 ground()
-
-
+semicircle()
+ground()
 
 
 
