@@ -1,9 +1,11 @@
 import turtle
+import random
 
 t = turtle.Turtle()
 sc = turtle.Screen()
 
-sc.tracer(1)
+sc.bgcolor('LightSkyBlue')
+sc.tracer(0)
 t.right(90)
 t.penup()
 t.forward(200)
@@ -32,12 +34,23 @@ def semicircle():
     t.left(90)
     t.forward(175)
     t.end_fill()
-    
+
+def randeverything():
+    for i in range(10):
+        t.begin_fill()
+        t.penup()
+        t.pencolor(random.random(), random.random(), random.random())
+        t.fillcolor(random.random(), random.random(), random.random())
+        t.goto(random.randint(-300,300), random.randint(-300,300))
+        t.pendown()
+        t.circle(radius= 80, steps= random.randint(3,10))
+        t.end_fill()
+        
 
 
 ground()
 semicircle()
-ground()
+randeverything()
 
 
 
