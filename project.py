@@ -52,7 +52,33 @@ ground()
 semicircle()
 randeverything()
 
+#Floating Island
+t.penup()
+t.goto(0,100)
+t.pencolor("#32a0a8")
+t.fillcolor("#32a88f")
+t.pensize(25)
+t.pendown()
+t.begin_fill()
+t.circle(radius=400, steps=5)
+t.end_fill()
 
+#Waterfall
+t.penup()
+t.pencolor("#3792b3")
+t.fillcolor("#3792b3")
+for i in range(10):
+    t.begin_fill()
+    t.goto(random.randint(-200, 200), random.randint(-300,300))
+    t.pendown()
+    t.circle(radius=60, steps=4)
+    t.penup()
+    t.end_fill()
+
+#Signature
+t.goto(150,-320)
+t.pencolor("#333c42")
+t.write("Jason", font=("noto_sans", 69))
 
 sc.update()
 sc.exitonclick()
