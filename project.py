@@ -67,16 +67,27 @@ t.end_fill()
 t.penup()
 t.pencolor("#3792b3")
 t.fillcolor("#3792b3")
-for i in range(10):
+for i in range(5):
     t.begin_fill()
-    t.goto(random.randint(-200, 200), random.randint(-300,300))
+    t.goto(random.randint(-250, 250), random.randint(200,300))
     t.pendown()
     t.circle(radius=60, steps=4)
     t.penup()
     t.end_fill()
 
+#Frame
+t.up()
+t.goto(400, -400) 
+t.down()
+t.goto(400, 400)    # Top right
+t.goto(-400, 400)   # Top left
+t.goto(-400, -400)  # Bottom left
+t.goto(400, -400)
+t.penup()
+
 #Signature
-t.goto(150,-320)
+t.goto(130,-320)
+t.pendown()
 t.pencolor("#333c42")
 t.write("Jason", font=("noto_sans", 69))
 
